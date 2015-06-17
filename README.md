@@ -12,6 +12,8 @@ SCROLLAndroid
 
 4. Run SBT and run ```eclipse``` if you are using the Eclipse Scala IDE. (to config see [here][gen-eclipse])
 
+5. Run ```sbt android:run``` to package and start the app on your device (this could take a while).
+
 [sbt-gen-idea]: https://github.com/mpeltonen/sbt-idea
 [gen-eclipse]: https://github.com/typesafehub/sbteclipse
 [android]: http://scala-ide.org/docs/tutorials/androiddevelopment/
