@@ -12,28 +12,16 @@ javacOptions in Compile ++= Seq("-source", "1.7", "-target", "1.7")
 
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature", "-encoding", "utf8")
 
-libraryDependencies ++= Seq("com.github.max-leuthaeuser" % "scroll_2.11" % "0.6")
+proguardCache in Android ++= Seq("com.github.max-leuthaeuser")
 
-dexMulti in Android := true
-
-sourceGenerators in Compile := Seq((sourceGenerators in Compile).value.last)
+libraryDependencies ++= Seq("com.github.max-leuthaeuser" % "scroll_2.11" % "0.7")
 
 proguardOptions in Android ++= Seq(
   "-dontobfuscate",
   "-dontoptimize",
-  "-dontskipnonpubliclibraryclasses",
-  "-dontskipnonpubliclibraryclassmembers",
   "-keepattributes Signature,InnerClasses,EnclosingMethod",
-  "-keepattributes *Annotation*",
-  "-dontwarn com.google.common.**",
-  "-dontwarn jline.console.**",
-  "-dontwarn org.fusesource.jansi.internal.**",
-  "-dontwarn scalax.collection.GraphBase**",
-  "-dontwarn scalax.collection.GraphTraversal**",
-  "-dontnote com.google.common.util.concurrent.**",
-  "-keep class scalax.collection.**",
-  "-keep class scala.collection.**",
-  "-keep class internal.**",
+  "-dontwarn **",
+  "-dontnote **",
   // for reflections
   "-keep class scala.AnyVal",
   "-keep class scala.Array",

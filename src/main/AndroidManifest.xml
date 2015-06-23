@@ -4,10 +4,6 @@
       android:versionCode="1"
       android:versionName="1.0">
     <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="22"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-feature android:name="android.hardware.touchscreen"
-                  android:required="false"/>
-
     <application android:label="SCROLLAndroid"
                  android:installLocation="auto">
         <activity android:name=".MainActivity">
