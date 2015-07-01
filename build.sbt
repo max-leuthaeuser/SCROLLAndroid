@@ -2,7 +2,7 @@ import android.Keys._
 
 platformTarget in Android := "android-22"
 
-scalaVersion := "2.11.6"
+scalaVersion := "2.11.7"
 
 name := "SCROLLAndroid"
 
@@ -14,7 +14,7 @@ scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature", "-encoding", "ut
 
 proguardCache in Android ++= Seq("com.github.max-leuthaeuser")
 
-libraryDependencies ++= Seq("com.github.max-leuthaeuser" % "scroll_2.11" % "0.7")
+libraryDependencies ++= Seq("com.github.max-leuthaeuser" % "scroll_2.11" % "0.9.1")
 
 proguardOptions in Android ++= Seq(
   "-dontobfuscate",

@@ -1,6 +1,6 @@
 package com.github.maxleuthaeuser;
 
-import internal.Compartment
+import scroll.internal.Compartment
 import android.app.Activity
 import android.os.Bundle
 import android.widget.FrameLayout
